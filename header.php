@@ -23,14 +23,11 @@
 <body>
 	<header class="blog-header py-3 mb-5" role="banner">
 		<div class="container">
-			<div class="row flex-nowrap justify-content-between align-items-center">
-					<div class="col-4 pt-1">
-					</div>
-					<div class="col-4 text-center">
-							<a class="blog-header-logo text-dark" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?> <sup class="text-primary"><?php cableraonline_get_subdomain(); ?></sup></a>
-					</div>
-					<div class="col-4 d-flex justify-content-end align-items-center">
-					</div>
+			<div class="row align-items-center">
+				<div class="col-12 text-center">
+					<h1><a class="blog-header-logo text-dark" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+					<h2 class="h6 text-muted">Noticias de Chaco</h2>
+				</div>
 			</div>
 		</div><!-- .container -->
 	</header>
