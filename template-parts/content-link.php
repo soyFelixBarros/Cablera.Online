@@ -55,6 +55,7 @@
 					<small class="card-subtitle mb-2 text-muted">
 					<?php printf( esc_html__( '%s', 'textdomain' ), esc_html( $on_draught ) ); ?>
 					 - <time class="timeago" datetime="<?php echo $post->post_date; ?>" title="<?php echo $post->post_date; ?>"></time>
+					<?php edit_post_link( __( 'Editar', 'strappress' ), '/ ' ); ?>
 					</small>
 				<?php endif; ?>
 				</div><!-- col-9 -->
@@ -62,9 +63,9 @@
 				$img = get_the_post_thumbnail_url( get_the_ID(), 'thumbnail' ); // medium
 				?>
 				<div class="col-3">
-				<a href="<?php echo esc_url( cableraonline_get_link_url() ); ?>" target="_blank">
-					<img class="rounded img-fluid" src="<?php echo $img; ?>">
-				</a>
+					<a href="<?php echo esc_url( cableraonline_get_link_url() ); ?>" target="_blank">
+						<img class="rounded img-fluid" src="<?php echo $img; ?>">
+					</a>
 				</div>
 				<?php endif; ?>
 			</div><!-- .row -->
