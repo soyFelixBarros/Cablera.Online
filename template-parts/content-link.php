@@ -17,7 +17,7 @@
 		<div class="card-body">
 			<div class="row">
 				<?php if ( has_post_thumbnail() && !is_single() ) : ?>
-				<div class="col-12 col-md-9">
+				<div class="col-9">
 				<?php else : ?>
 				<div class="col-12">
 				<?php endif; ?>
@@ -59,11 +59,11 @@
 				<?php endif; ?>
 				</div><!-- col-9 -->
 				<?php if ( has_post_thumbnail() && !is_single() ) :
-				$img = get_the_post_thumbnail_url( get_the_ID(), 'medium' );	
+				$img = get_the_post_thumbnail_url( get_the_ID(), 'thumbnail' ); // medium
 				?>
-				<div class="col-12 col-md-3 mt-3 mt-md-0">
+				<div class="col-3">
 				<a href="<?php echo esc_url( cableraonline_get_link_url() ); ?>" target="_blank">
-					<img class="card-img-top" src="<?php echo $img; ?>">
+					<img class="rounded img-fluid" src="<?php echo $img; ?>">
 				</a>
 				</div>
 				<?php endif; ?>
