@@ -21,7 +21,7 @@
 </head>
 
 <body>
-	<header class="blog-header py-3 mb-5" role="banner">
+	<header class="blog-header py-3 mb-4" role="banner">
 		<div class="container">
 			<div class="row align-items-center">
 				<div class="col-12 text-center">

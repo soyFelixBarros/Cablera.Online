@@ -13,7 +13,7 @@
 	$full_img = get_post_meta( get_the_ID(), '_strappress_full_featured', true );
 	//echo $full_img;
 ?>
-	<article id="post-<?php the_ID(); ?>" class="card mb-2 card shadow-sm">
+	<article id="post-<?php the_ID(); ?>" class="card mb-3 card shadow-sm">
 		<div class="card-body">
 			<div class="row">
 				<?php if ( has_post_thumbnail() && !is_single() ) : ?>
@@ -38,7 +38,7 @@
 				if ( is_single() ) :
 					the_title( sprintf( '<h1 class="entry-title"><a href="%s" target="blank">', esc_url( cableraonline_get_link_url() ) ), '</a></h1>' );
 				else :
-					the_title( sprintf( '<h3 class="mb-2"><a href="%s" class="text-dark" target="blank">', esc_url( cableraonline_get_link_url() ) ), '</a></h3>' );
+					the_title( sprintf( '<h3 class="mb-2 h4"><a href="%s" class="text-dark" target="blank">', esc_url( cableraonline_get_link_url() ) ), '</a></h3>' );
 				endif; ?>
 				<?php
 				$terms = get_the_terms( $post->ID, 'source' );
@@ -58,7 +58,7 @@
 				<?php endif; ?>
 				</div><!-- col-9 -->
 				<?php if ( has_post_thumbnail() && !is_single() ) :
-				$img = get_the_post_thumbnail_url( get_the_ID(), 'medium_large' );	
+				$img = get_the_post_thumbnail_url( get_the_ID(), 'medium' );	
 				?>
 				<div class="col-12 col-md-3 mt-3 mt-md-0">
 				<a href="<?php echo esc_url( cableraonline_get_link_url() ); ?>" target="_blank">
