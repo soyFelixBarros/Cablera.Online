@@ -1,0 +1,31 @@
+/*
+Theme Name: Cablera Online
+Theme URI: https://cablera.online
+Author: Felix Barros
+Author URI: https://felixbarros.blog
+Description: Tema para la página Cablera Online.
+Version: 1.0.2
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: strappress
+Tags:
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+StrapPress is based on Underscores http://underscores.me/, (C) 2012-2016 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+*/
+
+// Fonts
+@import url("https://fonts.googleapis.com/css?Playfair+Display:700,900");
+
+// // Variables
+// @import "variables";
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+@import "base";
+
+@import "blog";
