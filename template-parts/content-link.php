@@ -54,7 +54,7 @@
 					?>
 					<small class="card-subtitle mb-2 text-muted">
 					<?php printf( esc_html__( '%s', 'textdomain' ), esc_html( $on_draught ) ); ?>
-					 - <time class="timeago" datetime="<?php echo $post->post_date_gmt; ?>" title="<?php echo $post->post_date_gmt; ?>"></time>
+					 - <time class="timeago" datetime="<?php echo $post->post_date; ?>" title="<?php echo $post->post_date; ?>"></time>
 					</small>
 				<?php endif; ?>
 				</div><!-- col-9 -->
