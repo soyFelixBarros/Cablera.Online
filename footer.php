@@ -16,5 +16,13 @@
 		<p>Desarrollado por <a href="https://felixbarros.blog">Felix Barros</a>.</p>
 	</footer>
 
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-timeago/1.6.5/jquery.timeago.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-timeago/1.6.5/locales/jquery.timeago.es.min.js"></script>
+	<script>
+	$( document ).ready(function() {
+		$("time.timeago").timeago();
+	});
+	</script>
 </body>
 </html>
