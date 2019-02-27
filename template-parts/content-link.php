@@ -17,28 +17,22 @@
 		<div class="card-body">
 			<div class="row">
 				<?php if ( has_post_thumbnail() && !is_single() ) : ?>
-				<div class="col-9">
+				<div class="col-8 col-md-9">
 				<?php else : ?>
 				<div class="col-12">
 				<?php endif; ?>
 				<?php
-				$id = get_the_ID();
-				$categories = wp_get_object_terms( $id, 'category' , array( 'orderby' => 'id' ) );
-				if (! empty( $categories )) :
-					foreach ($categories as $category) {
-						if ($category->term_id == 1)
-							break;
+				$category = get_the_category();
+				if ($category[0]->cat_ID > 1) :
 				?>
-				<strong class="mb-2 text-primary"><?php echo $category->name; ?></strong>
+				<h6 class="card-subtitle mb-2 text-primary"><?php echo $category[0]->cat_name; ?></h6>
 				<?php
-				}
-				endif; ?>
-				
-				<?php
+				endif;
+
 				if ( is_single() ) :
 					the_title( sprintf( '<h1 class="entry-title"><a href="%s" target="blank">', esc_url( cableraonline_get_link_url() ) ), '</a></h1>' );
 				else :
-					the_title( sprintf( '<h3 class="mb-2 h4"><a href="%s" class="text-dark" target="blank">', esc_url( cableraonline_get_link_url() ) ), '</a></h3>' );
+					the_title( sprintf( '<h3 class="mb-3 h4"><a href="%s" class="text-dark" target="blank">', esc_url( cableraonline_get_link_url() ) ), '</a></h3>' );
 				endif; ?>
 				<?php
 				$terms = get_the_terms( $post->ID, 'source' );
@@ -62,7 +56,7 @@
 				<?php if ( has_post_thumbnail() && !is_single() ) :
 				$img = get_the_post_thumbnail_url( get_the_ID(), 'thumbnail' ); // medium
 				?>
-				<div class="col-3">
+				<div class="col-4 col-md-3">
 					<a href="<?php echo esc_url( cableraonline_get_link_url() ); ?>" target="_blank">
 						<img class="rounded img-fluid" src="<?php echo $img; ?>">
 					</a>
